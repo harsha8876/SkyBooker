@@ -1,9 +1,16 @@
-import React from 'react'
+import { SignUp } from "@clerk/clerk-react";
 
-const Register = () => {
+function Register() {
   return (
-    <div>Register</div>
-  )
+    <div className="flex justify-center py-10">
+      <SignUp
+        path="/register"
+        routing="path"
+        signInUrl="/login"
+        fallbackRedirectUrl="/search"
+      />
+    </div>
+  );
 }
 
-export default Register
+export default Register;
